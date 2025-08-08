@@ -1,3 +1,73 @@
+# Genially Frontend Code Test
+
+This is a web application built with React that provides an interactive canvas for creating and manipulating colored boxes. The project demonstrates advanced state management with MobX State Tree, direct DOM manipulation for animations using Interact.js, and a robust testing suite.
+
+## Features
+
+*   **Box Management**: Add new boxes with random colors to the canvas or remove the most recently added one.
+*   **Multi-Selection**: Select one or more boxes by clicking on them. A dashed border provides a clear visual indicator for selected items.
+*   **Drag & Drop**: Move boxes freely around the canvas. You can drag a box even if it's not currently selected. All selected boxes move together during a drag operation.
+*   **Color Customization**: Change the background color of all selected boxes simultaneously using a color picker in the toolbar.
+*   **Selection Counter**: The toolbar displays a real-time count of the number of currently selected boxes.
+*   **Undo/Redo**: Revert or re-apply box additions and removals with dedicated undo/redo buttons, powered by `mobx-state-tree` middlewares.
+
+## Tech Stack
+
+*   **Frontend Library**: React
+*   **State Management**: MobX State Tree (`mobx-state-tree`)
+*   **Drag & Drop**: Interact.js
+*   **Testing**: Jest & React Testing Library
+
+## Project Structure
+
+The project follows a standard Create React App structure with a clear separation of concerns:
+
+```
+src/
+├── components/   # React components (App, Canvas, Toolbar, Box)
+├── stores/       # MobX State Tree stores and models
+├── tests/        # Unit and integration tests for components and stores
+└── utils/        # Helper functions (e.g., color generation)
+```
+
+## Getting Started
+
+To run this project locally, follow these steps:
+
+### Prerequisites
+
+*   Node.js (v12 or later)
+*   npm or yarn
+
+### Installation & Setup
+
+1.  **Clone the repository:**
+    ```sh
+    git clone https://github.com/iortega-dev/genially-frontend-code-test.git
+    cd genially-frontend-code-test
+    ```
+
+2.  **Install dependencies:**
+    ```sh
+    npm install
+    ```
+
+3.  **Run the development server:**
+    ```sh
+    npm start
+    ```
+    The application will be available at `http://localhost:3000`.
+
+## Available Scripts
+
+In the project directory, you can run:
+
+*   `npm start`: Runs the app in development mode.
+*   `npm test`: Launches the test runner in interactive watch mode.
+*   `npm run build`: Builds the app for production to the `build` folder.
+
+////////////////////////////////////////////////////////////////////
+
 # Test requirements
 
 - ✔ Add and remove boxes.
